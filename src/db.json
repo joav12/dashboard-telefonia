@@ -1,0 +1,34 @@
+{
+    "clientes": [
+        {
+            "id": 100000,
+            "nome": "jorge",
+            "CPF": "123.456.789-00",
+            "telefone": "11123456789",
+            "email": "teste@teste.com"
+        },
+        {
+            "id": 120000,
+            "nome": "Marcia",
+            "CPF": "123.456.789-00",
+            "telefone": "11123456789",
+            "email": "teste@teste.com"
+        }
+    ],
+    "planos": [
+        {
+            "id": 100000,
+            "nome": "jorge",
+            "preco": "123.456.789-00",
+            "franquiaDados": "11123456789",
+            "MinutosLigacao": "teste@teste.com"
+        },
+        {
+            "id": 120000,
+            "nome": "Marcia",
+            "preco": "123.456.789-00",
+            "franquiaDados": "11123456789",
+            "MinutosLigacao": "teste@teste.com"
+        }
+    ]
+}

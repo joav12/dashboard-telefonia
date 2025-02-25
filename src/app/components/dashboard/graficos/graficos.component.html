@@ -1,0 +1,15 @@
+<div class="charts-container">
+  @if(chartType() == "barra"){
+  <ngx-charts-bar-vertical
+    [results]="chartData"
+    [view]="[300, 370]"
+    [showDataLabel]="true"
+  ></ngx-charts-bar-vertical>
+  
+  } @else{
+  <ngx-charts-pie-chart
+    [results]="chartData"
+    [view]="[300, 170]"
+  ></ngx-charts-pie-chart>
+  }
+</div>

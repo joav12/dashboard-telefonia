@@ -1,0 +1,117 @@
+{
+    "clientes": [
+        {
+            "id": 100000,
+            "nome": "jorge",
+            "CPF": "123.456.789-00",
+            "telefone": "11123456789",
+            "email": "teste@teste.com",
+            "dataCriacao": "04/01/2024",
+            "planoId": 100000
+        },
+        {
+            "id": 100001,
+            "nome": "Marcia",
+            "CPF": "123.456.789-00",
+            "telefone": "11123456789",
+            "email": "teste@teste.com",
+            "dataCriacao": "20/01/2024",
+            "planoId": 100000
+        },
+        {
+            "id": 100002,
+            "nome": "José",
+            "CPF": "123.456.789-00",
+            "telefone": "11123456789",
+            "email": "teste@teste.com",
+            "dataCriacao": "27/01/2024",
+            "planoId": 100000
+        },
+        {
+            "id": 100003,
+            "nome": "Pedro",
+            "CPF": "123.456.789-00",
+            "telefone": "11123456789",
+            "email": "teste@teste.com",
+            "dataCriacao": "10/02/2024",
+            "planoId": 100001
+        },
+        {
+            "id": 100004,
+            "nome": "Luiz",
+            "CPF": "123.456.789-00",
+            "telefone": "11123456789",
+            "email": "teste@teste.com",
+            "dataCriacao": "13/03/2024",
+            "planoId": 100001
+        },
+        {
+            "id": 100005,
+            "nome": "Raphaela",
+            "CPF": "123.456.789-00",
+            "telefone": "11123456789",
+            "email": "teste@teste.com",
+            "dataCriacao": "20/03/2024",
+            "planoId": 100001
+        },
+        {
+            "id": 100006,
+            "nome": "Maria",
+            "CPF": "123.456.789-00",
+            "telefone": "11123456789",
+            "email": "teste@teste.com",
+            "dataCriacao": "04/04/2024",
+            "planoId": 100001
+        },
+        {
+            "id": 100007,
+            "nome": "Ricardo",
+            "CPF": "123.456.789-00",
+            "telefone": "11123456789",
+            "email": "teste@teste.com",
+            "dataCriacao": "14/05/2024",
+            "planoId": 100001
+        },
+        {
+            "id": 100008,
+            "nome": "Doroti",
+            "CPF": "123.456.789-00",
+            "telefone": "11123456789",
+            "email": "teste@teste.com",
+            "dataCriacao": "08/06/2024",
+            "planoId": 100002
+        },
+        {
+            "id": 100009,
+            "nome": "Kenta",
+            "CPF": "123.456.789-00",
+            "telefone": "11123456789",
+            "email": "teste@teste.com",
+            "dataCriacao": "23/09/2024",
+            "planoId": 100002
+        }
+    ],
+    "planos": [
+        {
+            "id": 100000,
+            "nome": "Plano1",
+            "preco": "50.00",
+            "franquiaDados": "20gb",
+            "MinutosLigacao": "120"
+        },
+        {
+            "id": 100001,
+            "nome": "Plano2",
+            "preco": "100.000",
+            "franquiaDados": "50gb",
+            "MinutosLigacao": "200"
+        },
+        {
+            "id": 100002,
+            "nome": "Plano3",
+            "preco": "150.000",
+            "franquiaDados": "100gb",
+            "MinutosLigacao": "300"
+        }
+    ]
+}

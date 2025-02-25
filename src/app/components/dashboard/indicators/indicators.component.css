@@ -1,0 +1,7 @@
+.indicator-container{
+    .client-total, .total-plans, .everage-plans{
+        background-color: #7bc5e7;
+        padding: 10px;
+        border-radius: 14px;
+    }
+}

@@ -1,7 +1,7 @@
 export interface Cliente{
     id: number,
     nome: string,
-    CPF: string,
+    cpf: string,
     telefone: string,
     email: string,
     dataCriacao: string,

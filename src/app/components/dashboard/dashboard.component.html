@@ -27,3 +27,7 @@
         <app-indicators [clientData]="clientData" [planData]="planData"/>
     </div>
 </div>
+
+@if(openPopup){
+    <app-popup [popupText]="popupText" [isBackButton]="false" isPopupForm="no" (confirmButton)="refresh()" />
+}

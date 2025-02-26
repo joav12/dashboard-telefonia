@@ -1,0 +1,54 @@
+<div class="popUp-container">
+    <div class="backdrop"></div>
+
+    <div class="card text-center w-md p-8">
+        <div class="text">
+            <p>{{popupText()}}</p>
+        </div>
+
+        @if(isPopupForm() == 'plan'){
+            <div class="data mb-10">
+                <div class="nome">
+                    <p>nome: <span class="font-bold">{{confirmDataPlano!.nome}}</span></p>
+                </div>
+                <div class="preco">
+                    <p>preço: <span class="font-bold">{{confirmDataPlano!.preco}}</span></p>
+                </div>
+                <div class="franquiaDados">
+                    <p>franquia de dados: <span class="font-bold">{{confirmDataPlano!.franquiaDados}}</span></p>
+                </div>
+                <div class="minutosLigacao">
+                    <p>Minutos de ligação: <span class="font-bold">{{confirmDataPlano!.MinutosLigacao}}</span></p>
+                </div>
+            </div>
+        }
+        @else if (isPopupForm() == 'client') {
+            <div class="data mb-10">
+                <div class="nome">
+                    <p>nome: <span class="font-bold">{{confirmDataCliente!.nome}}</span></p>
+                </div>
+                <div class="cpf">
+                    <p>CPF: <span class="font-bold">{{confirmDataCliente!.cpf}}</span></p>
+                </div>
+                <div class="telefone">
+                    <p>Telefone: <span class="font-bold">{{confirmDataCliente!.telefone}}</span></p>
+                </div>
+                <div class="email">
+                    <p>E-mail: <span class="font-bold">{{confirmDataCliente!.email}}</span></p>
+                </div>
+            </div>
+        }
+
+        @if(isBackButton()){
+            <div class="buttons w-full flex justify-around">
+                <button (click)="backButtonClick()">Voltar</button>
+                <a (click)="confirmButtonClick()">Confirmar</a>
+            </div>
+        }
+        @else {
+            <div class="buttons w-full flex justify-end">
+                <a (click)="confirmButtonClick()">Ok</a>
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,60 @@
+<div class="form-container p-8 w-full">
+    <div class="title w-full mb-10">
+        <p class="text-3xl font-bold">Formulário de planos</p>
+    </div>
+
+    <form class="form flex flex-wrap p-8 gap-10" [formGroup]="planForm">
+        <div class="campos flex flex-wrap gap-10">
+            <div class="nome">
+                <mat-form-field class="w-sm">
+                    <mat-label>Nome</mat-label>
+                    <input [errorStateMatcher]="matcher" type="string" matInput formControlName="nome">
+                    @if (planForm.get('nome')?.hasError('required')) {
+                      <mat-error>Campo obrigatório</mat-error>
+                    }
+                  </mat-form-field>
+            </div>
+    
+            <div class="preco">
+                <mat-form-field class="w-sm">
+                    <mat-label>Preço</mat-label>
+                    <input [errorStateMatcher]="matcher" type="string" matInput formControlName="preco">
+                    @if (planForm.get('preco')?.hasError('required')) {
+                      <mat-error>Campo obrigatório</mat-error>
+                    }
+                  </mat-form-field>
+            </div>
+    
+            <div class="franquiaDados">
+                <mat-form-field class="w-sm">
+                    <mat-label>Franquia de dados</mat-label>
+                    <input [errorStateMatcher]="matcher" type="string" matInput formControlName="franquiaDados">
+                    @if (planForm.get('franquiaDados')?.hasError('required')) {
+                      <mat-error>Campo obrigatório</mat-error>
+                    }
+                  </mat-form-field>
+            </div>
+    
+            <div class="MinutosLigacao">
+                <mat-form-field class="w-sm">
+                    <mat-label>Minutos de ligação</mat-label>
+                    <input [errorStateMatcher]="matcher" type="string" matInput formControlName="MinutosLigacao">
+                    @if (planForm.get('MinutosLigacao')?.hasError('required')) {
+                      <mat-error>Campo obrigatório</mat-error>
+                    }
+                  </mat-form-field>
+            </div>
+        </div>
+
+        <div class="btn-send w-full flex justify-end">
+            <a (click)="confirmPopup()" class="text-2xl">Enviar</a>
+        </div>
+    </form>
+</div>
+
+@if(openPopup){
+    <app-popup [popupText]="popupText" [isBackButton]="true" isPopupForm="plan" [popupFormData]="planForm.value" (backButton)="closePopup()" (confirmButton)="sendForm()" />
+}
+@else if (isServerError) {
+  <app-popup [popupText]="popupText" [isBackButton]="false" isPopupForm="no" (confirmButton)="refresh()" />
+}

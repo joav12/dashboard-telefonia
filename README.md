@@ -3,7 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.7.
 
 Para iniciar o projeto rode em 1 terminal o comando 'npm run start'
-e em outro terminal 'json-server --watch src/db.json'
+e em outro terminal 'json-server --watch src/db/db.json'
 
 ## Development server
 

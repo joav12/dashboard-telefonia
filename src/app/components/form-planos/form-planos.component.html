@@ -1,0 +1,49 @@
+<div class="form-planos-container w-full p-8">
+    <div class="title text-center w-full mb-10">
+        <p class="text-3xl font-bold">Gerênciamento de Planos</p>
+    </div>
+
+    <div class="table-container p-6">
+        <table mat-table [dataSource]="tableData" class="w-full mb-5">
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef> Nome </th>
+                <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="preco">
+                <th mat-header-cell *matHeaderCellDef> Preço </th>
+                <td mat-cell *matCellDef="let element"> {{element.preco}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="franquiaDados">
+                <th mat-header-cell *matHeaderCellDef> franquia de dados </th>
+                <td mat-cell *matCellDef="let element"> {{element.franquiaDados}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="MinutosLigacao">
+                <th mat-header-cell *matHeaderCellDef> Minutos de ligacao </th>
+                <td mat-cell *matCellDef="let element"> {{element.MinutosLigacao}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="acoes">
+                <th mat-header-cell *matHeaderCellDef> Ações </th>
+                <td mat-cell *matCellDef="let element">
+                    <a [href]="'planos/form/' + element.id"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="edit"></mat-icon></a>
+
+                    <button (click)="deleteData(element.id)"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="delete"></mat-icon></button>
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+        <div class="button-container flex justify-end p-2">
+            <a href="planos/form">Criar Plano</a>
+        </div>
+    </div>
+</div>
+
+@if(openPopup){
+    <app-popup [popupText]="popupText" [isBackButton]="false" isPopupForm="no" (confirmButton)="refresh()" />
+}

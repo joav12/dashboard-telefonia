@@ -1,0 +1,126 @@
+{
+  "clientes": [
+    {
+      "id": "1",
+      "nome": "jorge",
+      "cpf": "123.456.789-00",
+      "telefone": "11123456789",
+      "email": "teste@teste.com",
+      "dataCriacao": "04/01/2024",
+      "planoId": 1
+    },
+    {
+      "id": "2",
+      "nome": "Marcia",
+      "cpf": "123.456.789-00",
+      "telefone": "11123456789",
+      "email": "teste@teste.com",
+      "dataCriacao": "20/01/2024",
+      "planoId": 1
+    },
+    {
+      "id": "3",
+      "nome": "José",
+      "cpf": "123.456.789-00",
+      "telefone": "11123456789",
+      "email": "teste@teste.com",
+      "dataCriacao": "27/01/2024",
+      "planoId": 1
+    },
+    {
+      "id": "4",
+      "nome": "Pedro",
+      "cpf": "123.456.789-00",
+      "telefone": "11123456789",
+      "email": "teste@teste.com",
+      "dataCriacao": "10/02/2024",
+      "planoId": 2
+    },
+    {
+      "id": "5",
+      "nome": "Luiz",
+      "cpf": "123.456.789-00",
+      "telefone": "11123456789",
+      "email": "teste@teste.com",
+      "dataCriacao": "13/03/2024",
+      "planoId": 2
+    },
+    {
+      "id": "6",
+      "nome": "Raphaela",
+      "cpf": "123.456.789-00",
+      "telefone": "11123456789",
+      "email": "teste@teste.com",
+      "dataCriacao": "20/03/2024",
+      "planoId": 2
+    },
+    {
+      "id": "7",
+      "nome": "Maria",
+      "cpf": "123.456.789-00",
+      "telefone": "11123456789",
+      "email": "teste@teste.com",
+      "dataCriacao": "04/04/2024",
+      "planoId": 2
+    },
+    {
+      "id": "8",
+      "nome": "Ricardo",
+      "cpf": "123.456.789-00",
+      "telefone": "11123456789",
+      "email": "teste@teste.com",
+      "dataCriacao": "14/05/2024",
+      "planoId": 2
+    },
+    {
+      "id": "9",
+      "nome": "Doroti",
+      "cpf": "123.456.789-00",
+      "telefone": "11123456789",
+      "email": "teste@teste.com",
+      "dataCriacao": "08/06/2024",
+      "planoId": 3
+    },
+    {
+      "nome": "Kenta",
+      "cpf": "123.456.789-01",
+      "telefone": "11123456789",
+      "email": "teste@teste.com",
+      "dataCriacao": "23/09/2024",
+      "planoId": 3,
+      "id": "10"
+    },
+    {
+      "id": "07c9",
+      "nome": "jeraldo",
+      "cpf": "123321211322",
+      "telefone": "12431231232",
+      "email": "asdasd@asdasd.com",
+      "dataCriacao": "26/02/2025",
+      "planoId": null
+    }
+  ],
+  "planos": [
+    {
+      "nome": "Plano1",
+      "preco": "50.00",
+      "franquiaDados": "20gb",
+      "MinutosLigacao": "150",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "nome": "Plano2",
+      "preco": "100.000",
+      "franquiaDados": "50gb",
+      "MinutosLigacao": "200"
+    },
+    {
+      "id": "3",
+      "nome": "Plano3",
+      "preco": "150.000",
+      "franquiaDados": "100gb",
+      "MinutosLigacao": "300"
+    }
+  ]
+}

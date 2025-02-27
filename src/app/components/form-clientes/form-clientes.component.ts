@@ -5,6 +5,9 @@ import { MatTableModule } from '@angular/material/table'
 import { MatIconModule } from '@angular/material/icon';
 import { forkJoin } from 'rxjs';
 import { PopupComponent } from "../reusable/popup/popup.component";
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-form-planos',
@@ -12,16 +15,20 @@ import { PopupComponent } from "../reusable/popup/popup.component";
   imports: [
     MatTableModule,
     MatIconModule,
-    PopupComponent
+    PopupComponent,
+    CommonModule,
+    FormsModule
 ],
   templateUrl: './form-clientes.component.html',
   styleUrl: './form-clientes.component.css'
 })
 export class FormClientesComponent {
   public tableData: Array<object> = [];
-  public displayedColumns: string[] = ['name', 'CPF', 'telefone', 'email', 'dataDeCriacao', 'plano','acoes'];
+  public displayedColumns: string[] = ['nome', 'CPF', 'telefone', 'email', 'dataDeCriacao', 'plano','acoes'];
   public openPopup: boolean = false;
   public popupText: string = '';
+  public searchNome: string = '';
+  public searchCPF: string = '';
 
   private clientData: Array<Cliente> = [];
   private planData: Array<Plano> = [];
@@ -33,7 +40,28 @@ export class FormClientesComponent {
     this.convertClientData();
   }
 
-  public refresh(): void {
+  public search(type: string): void {
+    this.convertClientData();
+
+    if (type == 'nome') {
+      if(this.searchNome == ''){
+        this.convertClientData()
+      }
+      else{
+        this.tableData = this.tableData.filter((plan) => (plan as Cliente).nome.toLocaleLowerCase() == this.searchNome.toLocaleLowerCase());
+      };
+    }
+    else {
+      if(this.searchCPF == ''){
+        this.convertClientData()
+      }
+      else{
+        this.tableData = this.tableData.filter((plan) => (plan as Cliente).cpf == this.searchCPF);
+      };
+    }
+  }
+
+  public refresh(): void{
     window.location.reload();
   }
 
@@ -62,7 +90,7 @@ export class FormClientesComponent {
     this.clientData.map(cliente =>{
       tableStructure.push({
         id: cliente.id,
-        name: cliente.nome,
+        nome: cliente.nome,
         cpf: cliente.cpf,
         telefone: cliente.telefone,
         email: cliente.email,

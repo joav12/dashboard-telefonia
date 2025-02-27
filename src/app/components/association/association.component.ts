@@ -11,11 +11,12 @@ import {
   moveItemInArray,
   transferArrayItem,
 } from '@angular/cdk/drag-drop';
+import {MatTabsModule} from '@angular/material/tabs';
 
 @Component({
   selector: 'app-association',
   standalone: true,
-  imports: [PopupComponent, CdkDropListGroup, CdkDropList, CdkDrag],
+  imports: [PopupComponent, CdkDropListGroup, CdkDropList, CdkDrag, MatTabsModule],
   templateUrl: './association.component.html',
   styleUrl: './association.component.css',
 })
@@ -50,7 +51,11 @@ export class AssociationComponent {
       );
     }
 
-    this.updatePlanos(event.container.data, event.currentIndex, event.container.id);
+    this.updatePlanos(
+      event.container.data,
+      event.currentIndex,
+      event.container.id
+    );
   }
 
   public refresh(): void {
@@ -93,13 +98,16 @@ export class AssociationComponent {
     });
   }
 
-  private updatePlanos(lista: Array<Cliente>, index: number, listId: string): void {
+  private updatePlanos(
+    lista: Array<Cliente>,
+    index: number,
+    listId: string
+  ): void {
     let planoId: string | null = '';
 
-    if(listId == 'noPlan'){
+    if (listId == 'noPlan') {
       planoId = null;
-    }
-    else{
+    } else {
       planoId = listId;
     }
 
@@ -109,9 +117,9 @@ export class AssociationComponent {
       telefone: lista[index].telefone,
       email: lista[index].email,
       dataCriacao: lista[index].dataCriacao,
-      planoId: planoId
-    }
+      planoId: planoId,
+    };
 
-    this.dbService.updateClientData(lista[index].id, client)
+    this.dbService.updateClientData(lista[index].id, client);
   }
 }

@@ -9,8 +9,8 @@ import { Cliente, Plano } from '../interfaces/interfaces';
 export class DbService {
   constructor(private http: HttpClient) {}
 
-  public getClientData(id: number | undefined): Observable<object> {
-    return this.http.get('http://localhost:3000/clientes');
+  public getClientData(filter: string | undefined): Observable<object> {
+    return this.http.get('http://localhost:3000/clientes/');
   }
 
   public sendClientData(data: Cliente): void {
@@ -31,8 +31,9 @@ export class DbService {
       .subscribe(() => console.log('deletado com sucesso'));
   }
 
-  public getPlanData(id: number | undefined): Observable<object> {
+  public getPlanData(filter: string | undefined): Observable<object> {
     return this.http.get('http://localhost:3000/planos/');
+    
   }
 
   public sendPlanData(data: Plano): void {

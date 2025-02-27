@@ -1,58 +1,64 @@
-.association-container{
-    .association-card{
-        box-shadow: 3px 3px 11px #0000006e;
-        background-color: #ffffff;
-        border-radius: 14px;
-    } 
+.association-container {
+  .association-card {
+    color: #000;
+    box-shadow: 3px 3px 11px #0000006e;
+    background-color: #ffffff;
+    border-radius: 14px;
+  }
 }
 
+.cliente,
+.plano {
+  width: 400px;
+  max-width: 100%;
+  display: inline-block;
+  vertical-align: top;
+}
 
-.cliente, .plano {
-    width: 400px;
-    max-width: 100%;
-    margin: 0 25px 25px 0;
-    display: inline-block;
-    vertical-align: top;
-  }
-  
-  .example-list {
-    border: solid 1px #ccc;
-    min-height: 60px;
-    background: white;
-    border-radius: 4px;
-    overflow: hidden;
-    display: block;
-  }
-  
-  .example-box {
-    padding: 10px 10px;
-    border-bottom: solid 1px #ccc;
-    color: rgba(0, 0, 0, 0.87);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-sizing: border-box;
-    cursor: move;
-    background: white;
-    font-size: 14px;
-  }
-  
-  .cdk-drag-preview {
-    box-sizing: border-box;
-    border-radius: 4px;
-    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
-                0 8px 10px 1px rgba(0, 0, 0, 0.14),
-                0 3px 14px 2px rgba(0, 0, 0, 0.12);
-  }
-  
-  .cdk-drag-placeholder {
-    opacity: 0;
-  }
-  
-  .cdk-drag-animating {
-    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
-  }
-  
-  .example-box:last-child {
-    border: none;
-  }
+.cliente{ margin: 0 25px 25px 0; }
+
+.cliente h2{ margin-bottom: 35px; }
+
+.example-list {
+  background: rgba(255, 255, 255, 0);
+  border-radius: 4px;
+  overflow: hidden;
+  display: block;
+  overflow-y: auto;
+  white-space: nowrap;
+}
+
+.example-box {
+  padding: 10px 10px;
+  border: solid 1px #ccc;
+  border-top: none;
+  color: rgba(0, 0, 0, 0.87);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  cursor: move;
+  background: white;
+  font-size: 14px;
+}
+
+.cdk-drag-preview {
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+    0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+
+  p{ margin: 0; }
+}
+
+.cdk-drag-placeholder {
+  opacity: 0;
+}
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.example-box:first-child {
+  border-top: solid 1px #ccc;
+}

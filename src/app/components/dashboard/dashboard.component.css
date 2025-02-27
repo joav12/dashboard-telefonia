@@ -1,9 +1,10 @@
 .dashboard-container{
     width: 100vw;
 
-    .graphs-container, .numbers{
-        box-shadow: 3px 3px 11px #0000006e;
-        background-color: #ffffff;
+    .bar-graph, .pie-graph{
+        box-shadow: 8px 7px 11px #0000006e;
+        background-color: #fff;
+        color: #000;
         border-radius: 14px;
     }
 }

@@ -2,6 +2,7 @@
     position: absolute;
     top: 0;
     width: 100%;
+    color: #000;
 
     .backdrop{
         background-color: #00000069;

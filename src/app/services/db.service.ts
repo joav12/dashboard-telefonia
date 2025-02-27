@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { Plano } from '../interfaces/interfaces';
+import { Cliente, Plano } from '../interfaces/interfaces';
 
 @Injectable({
   providedIn: 'root',
@@ -13,13 +13,13 @@ export class DbService {
     return this.http.get('http://localhost:3000/clientes');
   }
 
-  public sendClientData(data: Plano): void {
+  public sendClientData(data: Cliente): void {
     this.http
       .post('http://localhost:3000/clientes/', data)
       .subscribe(() => console.log('enviado com sucesso'));
   }
 
-  public updateClientData(id: number, data: Plano): void {
+  public updateClientData(id: number, data: Cliente): void {
     this.http
       .put(`http://localhost:3000/clientes/${id}`, data)
       .subscribe(() => console.log('atualizado com sucesso'));

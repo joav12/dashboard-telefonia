@@ -78,9 +78,7 @@ export class FormPComponent {
     else{
       this.popupText = 'confirme os dados abaixo';
       this.openPopup = true;
-    }
-
-    
+    }   
   }
 
   public closePopup(): void {

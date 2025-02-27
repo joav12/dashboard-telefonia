@@ -23,9 +23,14 @@ export class IndicatorsComponent {
     let clientPlans: Array<number> = [];
 
     this.clientData().map(client =>{
-      clientPlans.push(1);
+      if(client.planoId){
+        clientPlans.push(1);
+      }
+      else{
+        clientPlans.push(0);
+      }
     })
 
-    this.planMedia = (clientPlans.reduce((partialSum, a) => partialSum + a, 0) / clientPlans.length)
+    this.planMedia = parseFloat((clientPlans.reduce((partialSum, a) => partialSum + a, 0) / clientPlans.length).toFixed(2));
   }
 }

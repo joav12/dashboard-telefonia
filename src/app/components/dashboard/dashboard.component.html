@@ -1,18 +1,18 @@
-<div class="dashboard-container p-8">
-    <div class="title mb-20">
+<div class="dashboard-container flex flex-col items-center p-8">
+    <div class="title md:mb-20 mb-10">
         <p class="text-3xl font-bold text-center">
             Gestão de Planos de Telefonia
         </p>
     </div>
 
-    <div class="graphs-container flex gap-10 items-end justify-center p-5 mb-10">
-        <div class="bar-graph">
+    <div class="flex md:flex-row md:w-2xl gap-10 items-end justify-center items-center p-5 mb-10 w-md flex-col">
+        <div class="bar-graph p-8 flex flex-col justify-center items-center">
             <p class="text-center font-bold">Proporção de clientes (em porcentagem) por plano.</p>
 
             <app-graficos chartType="barra" [clientData]="clientData" [planData]="planData" />
         </div>
 
-        <div class="pie-graph">
+        <div class="pie-graph p-8 flex-col justify-center items-center">
             <p class="text-center font-bold">Clientes cadastrados por mês no último ano.</p>
 
             <app-graficos chartType="pizza" [clientData]="clientData" [planData]="planData" />

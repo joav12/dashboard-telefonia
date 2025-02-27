@@ -1,4 +1,4 @@
-<div class="app-container flex">
+<div class="app-container flex h-full" [style]="{'overflow-y': openOrClose == 'open' ? 'hidden' : 'visible'}">
     <div class="navbar-container p-5 h-full" [@openClose]="openOrClose">
         <div class="call-nav-button-container">
             <button (click)="openOrClose = 'close'"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="keyboard_arrow_left"></mat-icon></button>
@@ -16,7 +16,7 @@
         </div>
     </div>
 
-    <div class="component-container w-full">
+    <div class="component-container w-full h-full">
         <button (click)="openOrClose = 'open'"><mat-icon aria-hidden="false" aria-label="Example home icon" class="p-5" fontIcon="keyboard_arrow_right"></mat-icon></button>
         <router-outlet />
     </div>

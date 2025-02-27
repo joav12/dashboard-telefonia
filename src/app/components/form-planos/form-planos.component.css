@@ -2,19 +2,56 @@
     .table-container{
         box-shadow: 3px 3px 11px #0000006e;
         background-color: #ffffff;
-        border-radius: 14px;
+        border-radius: 14px 14px 0 0;
 
         button{ cursor: pointer; }
+        
+        .search-bar{
+            color: #000;
 
-        .button-container{
-            a{
-                background-color: #7bc5e7;
-                border-radius: 14px;
-                transition: all ease-in-out 0.2s;
-                padding: 5px 10px;
+            input{
+                border: 1px solid #000;
+                border-right: none;
+                border-radius: 14px 0 0 14px;
             }
 
-            a:hover{ background-color: #5f99b4; }
+            input:focus-visible{
+                outline: none;
+            }
+
+            button{
+                border: 1px solid #000;
+                border-left: none;
+                border-radius: 0 14px 14px 0;
+                height: 34px;
+            }
+        }
+    }
+
+    .button-container{
+        background-color: #ffffff;
+        border-radius: 0 0 14px 14px;
+
+        a{
+            background-color: #7bc5e7;
+            border-radius: 14px;
+            transition: all ease-in-out 0.2s;
+            padding: 5px 10px;
+        }
+
+        a:hover{ background-color: #5f99b4; }
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    .table-container{
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+
+        table{
+            min-width: 650px;
+
         }
     }
 }

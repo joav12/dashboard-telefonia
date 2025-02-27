@@ -1,56 +1,68 @@
 <div class="association-container flex flex-col items-center">
-    <div class="title mb-10">
-        <p class="text-3xl font-bold text-center">
-            Associação de clientes
-        </p>
+  <div class="title mb-10">
+    <p class="text-3xl font-bold text-center">Associação de clientes</p>
+  </div>
+
+  <div class="association-card flex flex-col p-8 h-auto lg:h-100 w-auto sm:w-lg lg:w-auto lg:flex-row" cdkDropListGroup>
+    <div class="cliente">
+      <h2>Clientes</h2>
+
+      <div class="drawer">
+        <p>Sem Plano</p>
+
+        <div
+          cdkDropList
+          id="noPlan"
+          [cdkDropListData]="noPlanList"
+          class="example-list h-50"
+          (cdkDropListDropped)="drop($event)"
+        >
+          @for (client of noPlanList; track client) {
+          <div class="example-box" cdkDrag>
+            <p>{{ client.nome }}</p>
+            <p>{{ client.cpf }}</p>
+          </div>
+          } @empty {
+          <p class="text-2xl font-bold text-center">
+            Todos os clientes tem planos
+          </p>
+          }
+        </div>
+      </div>
     </div>
 
-    <div class="association-card p-8" cdkDropListGroup>
-        <div class="cliente">
-            <h2>Clientes</h2>
-            <p>Sem Plano</p>
-          
-            <div
-                cdkDropList
-                id="noPlan"
-                [cdkDropListData]="noPlanList"
-                class="example-list"
-                (cdkDropListDropped)="drop($event)">
-              @for (client of noPlanList; track client) {
-                <div class="example-box" cdkDrag>
-                    <p>{{client.nome}}</p>
-                    <p>{{client.cpf}}</p>
-                </div>
-              }
-              @empty {
-                <p class="text-2xl font-bold text-center">Todos os clientes tem planos</p>
-              }
-            </div>
-          </div>
-          
-          <div class="plano">
-            <h2>planos</h2>
-                @for(plano of planData; track plano.id; let idx = $index){
-                    <p>{{plano.nome}}</p>
+    <div class="plano">
+        <h2>Planos</h2>
 
+        <mat-tab-group>
+            @for(plano of planData; track plano.id; let idx = $index){
+                <mat-tab label="{{plano.nome}}">
                     <div
-                    cdkDropList
-                    id="{{plano.id}}"
-                    [cdkDropListData]="withPlanList[idx]"
-                    class="example-list mb-8"
-                    (cdkDropListDropped)="drop($event)">
-                    @for (client of withPlanList[idx]; track client) {
+                        cdkDropList
+                        id="{{ plano.id }}"
+                        [cdkDropListData]="withPlanList[idx]"
+                        class="example-list h-50"
+                        (cdkDropListDropped)="drop($event)"
+                    >
+                        @for (client of withPlanList[idx]; track client) {
                         <div class="example-box" cdkDrag>
-                            <p>{{client.nome}}</p>
-                            <p>{{client.cpf}}</p>
+                        <p>{{ client.nome }}</p>
+                        <p>{{ client.cpf }}</p>
                         </div>
-                    }
+                        }
                     </div>
-                }
-          </div>
+                </mat-tab>
+            }
+        </mat-tab-group>
     </div>
+  </div>
 </div>
 
 @if(openPopup){
-    <app-popup [popupText]="popupText" [isBackButton]="false" isPopupForm="no" (confirmButton)="refresh()" />
+<app-popup
+  [popupText]="popupText"
+  [isBackButton]="false"
+  isPopupForm="no"
+  (confirmButton)="refresh()"
+/>
 }

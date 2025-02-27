@@ -3,10 +3,10 @@
         <p class="text-3xl font-bold">Formulário de planos</p>
     </div>
 
-    <form class="form flex flex-wrap p-8 gap-10" [formGroup]="planForm">
+    <form class="form flex flex-wrap sm:w-md lg:w-4xl p-8 gap-10" [formGroup]="planForm">
         <div class="campos flex flex-wrap gap-10">
-            <div class="nome">
-                <mat-form-field class="w-sm">
+            <div class="nome w-full md:w-auto">
+                <mat-form-field class="w-full md:w-sm">
                     <mat-label>Nome</mat-label>
                     <input [errorStateMatcher]="matcher" type="string" matInput formControlName="nome">
                     @if (planForm.get('nome')?.hasError('required')) {
@@ -15,8 +15,8 @@
                   </mat-form-field>
             </div>
     
-            <div class="preco">
-                <mat-form-field class="w-sm">
+            <div class="preco w-full md:w-auto">
+                <mat-form-field class="w-full md:w-sm">
                     <mat-label>Preço</mat-label>
                     <input [errorStateMatcher]="matcher" type="string" matInput formControlName="preco">
                     @if (planForm.get('preco')?.hasError('required')) {
@@ -25,8 +25,8 @@
                   </mat-form-field>
             </div>
     
-            <div class="franquiaDados">
-                <mat-form-field class="w-sm">
+            <div class="franquiaDados w-full md:w-auto">
+                <mat-form-field class="w-full md:w-sm">
                     <mat-label>Franquia de dados</mat-label>
                     <input [errorStateMatcher]="matcher" type="string" matInput formControlName="franquiaDados">
                     @if (planForm.get('franquiaDados')?.hasError('required')) {
@@ -35,8 +35,8 @@
                   </mat-form-field>
             </div>
     
-            <div class="MinutosLigacao">
-                <mat-form-field class="w-sm">
+            <div class="MinutosLigacao w-full md:w-auto">
+                <mat-form-field class="w-full md:w-sm">
                     <mat-label>Minutos de ligação</mat-label>
                     <input [errorStateMatcher]="matcher" type="string" matInput formControlName="MinutosLigacao">
                     @if (planForm.get('MinutosLigacao')?.hasError('required')) {

@@ -28,7 +28,7 @@ export class GraficosComponent {
     if (this.chartType() == 'barra') {
       let planPorcentage: Array<Array<number>> = [];
 
-      this.planData().map((planValue, index) => {
+      this.planData().map(planValue => {
         let clientIds: Array<number> = [];
         this.clientData().map((clientValue) => {
           if (clientValue.planoId == planValue.id) {
@@ -54,11 +54,15 @@ export class GraficosComponent {
         let clientIds: Array<number> = [];
 
         this.clientData().map((clientValue) => {
-          let clientMonth: number = parseInt(
-            clientValue.dataCriacao.split('/')[1]
-          );
+          let createYear = clientValue.dataCriacao.split('/')[2];
 
-          if(clientMonth == (i+1)) clientIds.push(clientValue.id);  
+          if(createYear == '2024'){
+            let clientMonth: number = parseInt(
+              clientValue.dataCriacao.split('/')[1]
+            );
+  
+            if(clientMonth == (i+1)) clientIds.push(clientValue.id);  
+          }
         });
 
         clientDate.push(clientIds);

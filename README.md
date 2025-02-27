@@ -8,5 +8,5 @@ depois rode no mesmo terminal o comando 'npm i --force' (o tailwind obriga o --f
 
 após a instalação rode no mesmo terminal o comando 'npm run start' para iniciar o servidor web
 
-e em outro terminal na pasta do projeto, rode o comando 'json-server --watch src/db/db.json' para iniciar o servidor JSON (Sem ele o programa não funciona)
+e em outro terminal na pasta do projeto, rode o comando 'json-server --watch src/db/db.json' para iniciar o servidor JSON (você receberá um aviso caso o servidor não esteja ligado)
 ## ------------------------------------------------------------------------------------------

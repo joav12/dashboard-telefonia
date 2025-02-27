@@ -7,9 +7,8 @@ depois rode no mesmo terminal o comando 'npm i --force' (o tailwind obriga o --f
 
 após a instalação rode no mesmo terminal o comando 'npm run start' para iniciar o servidor web
 
-## ------------------------------------------------------------------------------------------
-
 e em outro terminal na pasta do projeto, rode o comando 'json-server --watch src/db/db.json' para iniciar o servidor JSON (Sem ele o programa não funciona)
+## ------------------------------------------------------------------------------------------
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.7.
 
